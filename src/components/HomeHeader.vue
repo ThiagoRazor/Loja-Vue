@@ -1,4 +1,3 @@
-
 <template>
     <div class="flex items-center justify-between">
         <div class="hidden w-full text-gray-600 md:flex md:items-center">
