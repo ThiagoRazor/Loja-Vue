@@ -1,10 +1,10 @@
 <template>
     <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                        <div class="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
-                            <img class="object-contain w-full rounded-md h-72 xl:h-80" src="https://m.media-amazon.com/images/I/61354M1SkyL._AC_SX679_.jpg" alt="T-Shirt">
-                            <h4 class="mt-2 max-w-[250px] text-lg font-medium text-gray-700  truncate">Resident Evil 4 </h4>
-                            <h2 class="mt-2 max-w-[250px] text-lg font-medium text-indigo-700">(PS4)</h2>
-                            <p class="text-blue-500">R$ 250.00</p>
+                        <div v-for="(jogo, index) in jogos" :key="index" class="flex flex-col items-center justify-center w-full max-w-lg mx-auto">
+                            <img class="object-contain w-full rounded-md h-72 xl:h-80" :src="jogo.img" alt="T-Shirt">
+                            <h4 class="mt-2 max-w-[250px] text-lg font-medium text-gray-700  truncate">{{ jogo.name }} </h4>
+                            <h2 class="mt-2 max-w-[250px] text-lg font-medium text-indigo-700">({{ jogo.console }})</h2>
+                            <p class="text-blue-500">R$ {{ jogo.price }}</p>
 
                             <button class="flex items-center justify-center w-full px-2 py-2 mt-4 font-medium tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md hover:bg-indigo-600 focus:outline-none focus:bg-gray-700">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mx-1" viewBox="0 0 20 20" fill="currentColor">
@@ -17,22 +17,22 @@
 </template>
 
 <script>
-import games from '../data/games.json'
+import gameList from '../data/games.json'
 
 export default {
 
     data(){
-        jogos: []
+        return{
+        jogos: gameList,
+    }
     },
     created(){
-        fetch('./data/games.json')
+        fetch('https://raw.githubusercontent.com/ThiagoRazor/Loja-Vue/main/src/data/games.json')
         .then(response => response.json())
         .then(data =>{
             this.jogos = data
-            console.log(this.jogos)
         })
     }
-
 }
 
 </script>
