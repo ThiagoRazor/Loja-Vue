@@ -4,7 +4,7 @@ import CartItens from './CartItens.vue'
 
 <template>
     <div
-        class="hidden right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
+        class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
         <div class="flex items-center justify-between">
             <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
             <button class="text-gray-600 focus:outline-none">
