@@ -2,12 +2,14 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HomeHeader from './components/HomeHeader.vue'
 import Footer from './components/Footer.vue'
+import AsideCart from './components/AsideCart.vue'
 </script>
 
 <template>
   <header>
         <div class="wrapper">
-            <HomeHeader />
+          <HomeHeader :is-cart-show="isCartShow" @toggle-cart="toggleCart" />
+            <AsideCart :class="isCartShow ? 'fixed' : 'hidden'"/>
             <div class="container m-auto px-6 py-3">
               <nav class="sm:flex sm:justify-center sm:items-center mt-4">
                 <div class="flex flex-col sm:flex-row">
@@ -28,4 +30,20 @@ import Footer from './components/Footer.vue'
           <Footer />
         </footer>
 </template>
+
+<script>
+export default{
+  data(){
+    return{
+    isCartShow: false  
+  }
+  },
+  methods:{
+    toggleCart(){
+      this.isCartShow = !this.isCartShow;
+    }
+  }
+}
+</script>
+
 

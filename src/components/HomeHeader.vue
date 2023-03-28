@@ -1,5 +1,5 @@
 <template>
-    <div class="flex items-center justify-between">
+    <div class="flex items-center justify-between px-12 py-4">
         <div class="hidden w-full text-gray-600 md:flex md:items-center">
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
@@ -15,7 +15,7 @@
             Loja Vue
         </div>
         <div class="flex items-center justify-end w-full">
-            <button class="text-gray-600 focus:outline-none mx-4 sm:mx-0">
+            <button @click="toggleCart" class="text-white w-8 h-8 flex justify-center items-center focus:outline-none mx-4 sm:mx-0 z-40 rounded-full bg-gray-700">
                 <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     viewBox="0 0 24 24" stroke="currentColor">
                     <path
@@ -25,7 +25,7 @@
             </button>
 
             <div class="flex sm:hidden">
-                <button type="button" class="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
+                <button  type="button" class="text-gray-600 hover:text-gray-500 focus:outline-none focus:text-gray-500"
                     aria-label="toggle menu">
                     <svg viewBox="0 0 24 24" class="h-6 w-6 fill-current">
                         <path fill-rule="evenodd"
@@ -35,5 +35,27 @@
                 </button>
             </div>
         </div>
-    </div>
+</div>
 </template>
+
+
+<script>
+import AsideCart from './AsideCart.vue';
+
+export default {
+    components:{
+        AsideCart,
+    },
+    props:{
+        isCartShow:{
+            type: Boolean,
+            default: false
+        }
+    },
+    methods:{
+        toggleCart(){
+            this.$emit('toggle-cart');
+        }
+    }
+}
+</script>

@@ -1,18 +1,9 @@
-<script setup>
-import CartItens from './CartItens.vue'
-</script>
 
 <template>
     <div
-        class="fixed right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300">
+        class="right-0 top-0 max-w-xs w-full h-full px-6 py-4 transition duration-300 transform overflow-y-auto bg-white border-l-2 border-gray-300 z-30">
         <div class="flex items-center justify-between">
-            <h3 class="text-2xl font-medium text-gray-700">Your cart</h3>
-            <button class="text-gray-600 focus:outline-none">
-                <svg class="h-5 w-5" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+            <h3 class="text-2xl font-medium text-gray-700">Carrinho</h3>
         </div>
         <hr class="my-3">
         <CartItens />
@@ -26,3 +17,13 @@ import CartItens from './CartItens.vue'
         </a>
     </div>
 </template>
+
+<script>
+import CartItens from './CartItens.vue'
+
+export default {
+    components:{
+        CartItens
+    }
+}
+</script>
