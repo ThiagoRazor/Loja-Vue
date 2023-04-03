@@ -1,15 +1,7 @@
-<script>
-import Product from '../components/Product.vue'
-
-export default {
-    components:{
-        Product,
-    }
-}
-</script>
 <template>
     <!-- component -->
 <section class="bg-white">
+    <NavInput :onInput="filtrarProdutos"/>
         <div class="container px-6 py-8 mx-auto">
             <div class="lg:flex lg:-mx-2">
                 <div class="space-y-3 lg:w-1/5 lg:px-2 lg:space-y-4">
@@ -28,9 +20,43 @@ export default {
                             </select>
                         </div>
                     </div>
-                    <Product/>
+                    <Product :listaProdutos="produtos"/>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import Product from '@/components/Product.vue'
+import NavInput from '@/components/NavInput.vue'
+
+export default {
+  components: {
+    Product,
+    NavInput
+  },
+  data() {
+    return {
+      produtos: [],
+      termoBusca: ''
+    }
+  },
+  methods: {
+    filtrarProdutos(termoBusca) {
+      this.termoBusca = termoBusca
+      this.produtos = this.produtos.filter(produto => produto.name.toLowerCase().includes(this.termoBusca.toLowerCase()))
+    },
+    buscarDados() {
+      fetch('https://raw.githubusercontent.com/ThiagoRazor/Loja-Vue/main/src/data/games.json')
+        .then(response => response.json())
+        .then(data =>{
+          this.produtos = data
+        })
+    }
+  },
+  mounted() {
+    this.buscarDados()
+  }
+}
+</script>

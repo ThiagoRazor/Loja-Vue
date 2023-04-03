@@ -1,50 +1,50 @@
 [
     {
         
-        "name": "Resident Evil 4",
-        "console": "PS4",
+        "name": "resident evil 4",
+        "console": "ps4",
         "price": "250.00",
         "img": "https://m.media-amazon.com/images/I/61354M1SkyL._AC_SX679_.jpg"
     },
     {
-        "name": "God Of War Ragnarok",
-        "console": "PS4",
+        "name": "god of war ragnarok",
+        "console": "ps4",
         "price": "200.00",
         "img": "https://m.media-amazon.com/images/I/819bwWHNMJL._AC_SX679_.jpg"
     },
     {
-        "name": "Gran Turismo 7",
-        "console": "PS4",
+        "name": "gran turismo 7",
+        "console": "ps4",
         "price": "50.00",
         "img": "https://m.media-amazon.com/images/I/61n-TpH+LFL._AC_SX679_.jpg"
     },
     {
-        "name": "Horizon Chase Turbo Senna Sempre",
-        "console": "PS4",
+        "name": "horizon chase turbo senna sempre",
+        "console": "ps4",
         "price": "63.00",
         "img": "https://m.media-amazon.com/images/I/71I5VncB-gL._AC_SX522_.jpg"
     },
     {
-        "name": "Grand Theft Auto. The Trilogy - the Definitive Edition",
-        "console": "PS4",
+        "name": "grand theft auto, the trilogy -- definitive edition",
+        "console": "ps4",
         "price": "99,90",
         "img": "https://m.media-amazon.com/images/I/61a266-ERyL._AC_SX679_.jpg"
     },
     {
-        "name": "Bloodborne",
-        "console": "PS4",
+        "name": "bloodborne",
+        "console": "ps4",
         "price": "49.90",
         "img": "https://m.media-amazon.com/images/I/71TlDBQytOL._AC_SX425_.jpg"
     },
     {
-        "name": "Uncharted: The Drake Collection Hits",
-        "console": "PS4",
+        "name": "uncharted: the drake collection hits",
+        "console": "ps4",
         "price": "78,89",
         "img": "https://m.media-amazon.com/images/I/813QeeXqZwL._AC_SX425_.jpg"
     },
     {
-        "name": "Far Cry 4",
-        "console": "PS4",
+        "name": "far cry 4",
+        "console": "ps4",
         "price": "119.00",
         "img": "https://m.media-amazon.com/images/I/81xfNIdUE9L._AC_SX425_.jpg"
     }
